@@ -6,12 +6,12 @@ COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip install -r requirements.txt
 
-EXPOSE 8000
+
 
 RUN useradd app
 
 USER app
-
+EXPOSE 8000
 COPY . .
 
 ENV FLASK_APP=src/app.py

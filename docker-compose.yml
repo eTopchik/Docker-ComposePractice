@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.8"
 
 services:
   db:
@@ -14,6 +14,8 @@ services:
       retries: 60
   app:
     build: .
+    ports:
+      - "8000:8000"
     environment:
       DB_NAME: test
       DB_USER: postgres
